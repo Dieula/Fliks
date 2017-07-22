@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="?attr/colorButtonNormal">
 
     <ImageView
         android:id="@+id/ivMovieImage"
@@ -13,23 +14,24 @@
         tools:ignore="ContentDescription" />
 
     <TextView
-        android:textStyle="bold"
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        tools:text="Spider-Man: Homecoming"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="11dp" />
+        android:layout_toEndOf="@+id/ivMovieImage"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold"
+        tools:text="Spider-Man: Homecoming" />
 
     <TextView
         android:id="@+id/tvOverview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        tools:text="Following the events of Captain America: Civil War, Peter Parker, with the help of his mentor Tony Stark, tries to balance his life as an ordinary high school student in Queens, New York City, with fighting crime as his superhero alter ego Spider-Man as a new threat, the Vulture, emerges."
+        android:layout_alignParentEnd="true"
         android:layout_below="@+id/tvTitle"
-        android:layout_alignStart="@+id/tvTitle" />
+        android:layout_toEndOf="@+id/ivMovieImage"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="18sp"
+        tools:text="Following the events of Captain America: Civil War, Peter Parker, with the help of his mentor Tony Stark, tries to balance his life as an ordinary high school student in Queens, New York City, with fighting crime as his superhero alter ego Spider-Man as a new threat, the Vulture, emerges." />
 
 </RelativeLayout>

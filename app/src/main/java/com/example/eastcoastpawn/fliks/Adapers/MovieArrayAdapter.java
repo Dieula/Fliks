@@ -14,6 +14,8 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
+
 /**
  * Created by East Coast Pawn on 7/20/2017.
  */
@@ -28,7 +30,7 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
         super(context, android.R.layout.simple_list_item_1, movies);
     }
 
-    public View getView(int position, View convertView, ViewGroup parent) {
+   public View getView(int position, View convertView, ViewGroup parent) {
         Movie movie = getItem(position);
         ViewHolder viewHolder;
         if (convertView == null) {
@@ -55,7 +57,7 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
         tvTitle.setText(movie.getOriginalTitle());
         tvOverview.setText(movie.getOverview());
 
-        Picasso.with(getContext()).load(movie.getPosterPath()).into(ivImage);
+        Picasso.with(getContext()).load(movie.getPosterPath()).transform(new RoundedCornersTransformation(10, 10)).into(ivImage);
 
         return convertView;
 

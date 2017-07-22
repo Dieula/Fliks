@@ -24,6 +24,7 @@ public class Movie {
         return originalTitle;
     }
     public String getOverview()
+
     {
         return overview;
     }

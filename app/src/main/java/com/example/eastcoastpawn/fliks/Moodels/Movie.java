@@ -12,10 +12,13 @@ import java.util.ArrayList;
  */
 
 public class Movie {
+
+
     public String getPosterPath(){
-        return String.format("https://image.tmdb.org/tp/w342/%s",getPosterPath());
+        return String.format("https://image.tmdb.org/t/p/w342/%s", posterPath);
 
     }
+
     public String getOriginalTitle()
     {
         return originalTitle;

@@ -57,7 +57,7 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
         tvTitle.setText(movie.getOriginalTitle());
         tvOverview.setText(movie.getOverview());
 
-        Picasso.with(getContext()).load(movie.getPosterPath()).placeholder(R.drawable.player.placeholder).error(R.drawable.player_placeholder_error).transform(new RoundedCornersTransformation(10, 10)).into(ivImage);
+        Picasso.with(getContext()).load(movie.getPosterPath()).placeholder(R.drawable.player).transform(new RoundedCornersTransformation(10, 10)).into(ivImage);
 
         return convertView;
 

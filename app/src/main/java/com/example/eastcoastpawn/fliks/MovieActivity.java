@@ -1,7 +1,10 @@
 package com.example.eastcoastpawn.fliks;
 
+import android.content.Intent;
+import android.support.v7.widget.Toolbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.widget.ListView;
 
@@ -24,12 +27,31 @@ public class MovieActivity extends AppCompatActivity {
     ArrayList<Movie>movies;
     MovieArrayAdapter movieAdapter;
     ListView IvItems;
+    // ActivityOne.java
+    public void launchComposeView() {
+        // first parameter is the context, second is the class of the activity to launch
+        Intent i = new Intent(MovieActivity.this,Movie.class);
+        // put "extras" into the bundle for access in the second activity
+        i.putExtra("username", "foobar");
+        i.putExtra("in_reply_to", "george");
+        i.putExtra("code", 400);
+        // brings up the second activity
+        startActivity(i);
+    }
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie);
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.mipmap.ic_icon);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+
+        String username = getIntent().getStringExtra("username");
+        String inReplyTo = getIntent().getStringExtra("in_reply_to");
+        int code = getIntent().getIntExtra("code", 0);
 
         IvItems = (ListView) findViewById(R.id.IvMovies);
         movies = new ArrayList<>();

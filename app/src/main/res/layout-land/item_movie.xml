@@ -20,6 +20,8 @@
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/ivMovieImage"
         android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="18sp"
         android:textStyle="bold"
         tools:text="Spider-Man: Homecoming" />
 
@@ -31,7 +33,7 @@
         android:layout_below="@+id/tvTitle"
         android:layout_toEndOf="@+id/ivMovieImage"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="18sp"
+        android:textSize="12dp"
         tools:text="Following the events of Captain America: Civil War, Peter Parker, with the help of his mentor Tony Stark, tries to balance his life as an ordinary high school student in Queens, New York City, with fighting crime as his superhero alter ego Spider-Man as a new threat, the Vulture, emerges." />
 
 </RelativeLayout>

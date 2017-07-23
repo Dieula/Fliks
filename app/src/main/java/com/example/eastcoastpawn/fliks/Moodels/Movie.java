@@ -45,7 +45,7 @@ public class Movie {
         {
             try
             {
-               results.add(new Movie(array.getJSONObject(x)));
+                results.add(new Movie(array.getJSONObject(x)));
             } catch (JSONException e) {
                 e.printStackTrace();
             }

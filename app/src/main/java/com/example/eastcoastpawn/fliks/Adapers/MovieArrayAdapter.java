@@ -23,14 +23,14 @@ import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
 public class MovieArrayAdapter extends ArrayAdapter<Movie> {
     private static class ViewHolder
     {
-       TextView Title;
+        TextView Title;
         TextView Overview;
     }
     public MovieArrayAdapter(Context context, List<Movie> movies) {
         super(context, android.R.layout.simple_list_item_1, movies);
     }
 
-   public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, ViewGroup parent) {
         Movie movie = getItem(position);
         ViewHolder viewHolder;
         if (convertView == null) {
@@ -57,7 +57,7 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
         tvTitle.setText(movie.getOriginalTitle());
         tvOverview.setText(movie.getOverview());
 
-        Picasso.with(getContext()).load(movie.getPosterPath()).transform(new RoundedCornersTransformation(10, 10)).into(ivImage);
+        Picasso.with(getContext()).load(movie.getPosterPath()).placeholder(R.drawable.player.placeholder).error(R.drawable.player_placeholder_error).transform(new RoundedCornersTransformation(10, 10)).into(ivImage);
 
         return convertView;
 

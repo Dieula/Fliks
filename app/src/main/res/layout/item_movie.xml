@@ -8,8 +8,9 @@
 
     <ImageView
         android:id="@+id/ivMovieImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:scrollbarSize="@android:dimen/app_icon_size"
         app:srcCompat="@mipmap/ic_launcher"
         tools:ignore="ContentDescription" />
 
@@ -20,6 +21,8 @@
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/ivMovieImage"
         android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="18sp"
         android:textStyle="bold"
         tools:text="Spider-Man: Homecoming" />
 
@@ -31,7 +34,7 @@
         android:layout_below="@+id/tvTitle"
         android:layout_toEndOf="@+id/ivMovieImage"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="18sp"
+        android:textSize="12dp"
         tools:text="Following the events of Captain America: Civil War, Peter Parker, with the help of his mentor Tony Stark, tries to balance his life as an ordinary high school student in Queens, New York City, with fighting crime as his superhero alter ego Spider-Man as a new threat, the Vulture, emerges." />
 
 </RelativeLayout>
